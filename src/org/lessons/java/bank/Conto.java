@@ -51,7 +51,7 @@ public class Conto {
         if(cifraDaVersare <= 0){
             System.out.println("Impossibile versare cifre negative o pari a zero");
         }else{
-            System.out.println("operazione di versamento effettuata");
+            System.out.println("operazione di versamento effettuata!");
         }
     }
 
