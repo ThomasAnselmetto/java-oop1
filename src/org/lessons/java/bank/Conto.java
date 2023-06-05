@@ -37,23 +37,26 @@ public class Conto {
         return new DecimalFormat("#,###.##€").format(saldo);
     }
 //    creo metodo per prelevare denaro e gli passo un parametri cifra che sara' un double
-        public void prelevaDenaro(double cifraDaPrelevare){
-        if(cifraDaPrelevare > saldo){
-            System.out.println("La Cifra selezionata supera il tuo budget! inserisci una nuova cifra");
-        }else if(cifraDaPrelevare == 0){
-            System.out.println("Hai inserito un importo pari a 0! inserisci una nuova cifra");
-        }else{
-            saldo += cifraDaPrelevare;
-            System.out.println("Sperpera tutti i soldi prelevati,mi raccomando");
-        }
-        }
-    public void versaDenaro(double cifraDaVersare){
-        if(cifraDaVersare <= 0){
-            System.out.println("Impossibile versare cifre negative o pari a zero");
-        }else{
-            System.out.println("operazione di versamento effettuata!");
+public void prelevaDenaro(double cifraDaPrelevare) {
+    if (cifraDaPrelevare > saldo) {
+        System.out.println("La cifra selezionata supera il tuo saldo! Inserisci una nuova cifra.");
+    } else if (cifraDaPrelevare <= 0) {
+        System.out.println("Hai inserito un importo non valido! Inserisci una nuova cifra.");
+    } else {
+        saldo -= cifraDaPrelevare;
+        System.out.println("Hai prelevato " + cifraDaPrelevare + "€. Sperpera tutti i soldi prelevati!");
+    }
+}
+
+    public void versaDenaro(double cifraDaVersare) {
+        if (cifraDaVersare <= 0) {
+            System.out.println("Impossibile versare cifre negative o pari a zero.");
+        } else {
+            saldo += cifraDaVersare;
+            System.out.println("Hai versato " + cifraDaVersare + "€. Operazione di versamento effettuata!");
         }
     }
+
 
 
 }
