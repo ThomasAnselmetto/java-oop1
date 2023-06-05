@@ -9,6 +9,7 @@
 //        - prezzo
 //        - iva
 //        Usate opportunamente i livelli di accesso (public, private), i costruttori, i metodi getter e setter ed eventuali altri metodi di “servizio” per fare in modo che:
+
 //        alla creazione di un nuovo prodotto il codice sia valorizzato con un numero random
 //        Il codice prodotto sia accessibile solo in lettura
 //        Gli altri attributi siano accessibili sia in lettura che in scrittura
